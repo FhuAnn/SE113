@@ -1,0 +1,385 @@
+.container_overall
+{
+    -fx-background-color: #f3faea;
+}
+
+#add {
+    -fx-padding: 5 10 10 10;
+    -fx-background-insets: 0, 0 0 2 0, 0 0 3 0, 0 0 4 0;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-background-radius: 20;
+    -fx-pref-width: 100;
+    -fx-pref-height: 50;
+    -fx-text-fill: #67A10AFF;
+    -fx-font-family: "Segoe UI black";
+    -fx-background-color: transparent;
+    -fx-border-color: #74b60c;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+#add:hover {
+    -fx-border-width: 0;
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100% , #78b713 0%, #67a10a 100%),
+    #6faf0a,
+    #7cc40c,
+    linear-gradient(to right, #adea4e, #7abe0d);
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+}
+
+#add:pressed
+{
+    --fx-padding: 6 10 9 10 ;
+    -fx-background-insets: 1 0 0 0, 1 0 1 0 , 1 0 2 0, 1 0 3 0;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0),4,0,0,1);
+}
+#delete {
+    -fx-padding: 5 10 10 10;
+    -fx-background-insets: 0, 0 0 2 0, 0 0 3 0, 0 0 4 0;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-border-width: 2;
+    -fx-pref-width: 100;
+    -fx-pref-height: 50;
+    -fx-text-fill: #ff0000;
+    -fx-font-family: "Segoe UI black";
+    -fx-background-color: transparent;
+    -fx-border-color: #ff0000;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+#delete:hover {
+    -fx-border-width: 0;
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100% , #ab0202 0%, #a10303 100%),
+    #da0909,
+    #f62121,
+    linear-gradient(to right, #ff7979, #ff0000);
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+}
+
+#delete:pressed
+{
+    --fx-padding: 6 10 9 10 ;
+    -fx-background-insets: 1 0 0 0, 1 0 1 0 , 1 0 2 0, 1 0 3 0;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0),4,0,0,1);
+}
+#edit {
+    -fx-padding: 5 10 10 10;
+    -fx-background-insets: 0, 0 0 2 0, 0 0 3 0, 0 0 4 0;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-border-width: 2;
+    -fx-pref-width: 100;
+    -fx-pref-height: 50;
+    -fx-text-fill: #ff9100;
+    -fx-font-family: "Segoe UI black";
+    -fx-background-color: transparent;
+    -fx-border-color: #ff9100;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+#edit:hover {
+    -fx-border-width: 0;
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100% , #ea8a07 0%, #d27700 100%),
+    #dc820d,
+    #ea8f1d,
+    linear-gradient(to right, #ffc57e, #ea8400);
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+}
+
+#edit:pressed
+{
+    --fx-padding: 6 10 9 10 ;
+    -fx-background-insets: 1 0 0 0, 1 0 1 0 , 1 0 2 0, 1 0 3 0;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0),4,0,0,1);
+}
+/*comboBox*/
+.combo-box .text-field
+{
+    -fx-background-radius: 20px;
+}
+.combo-box
+{
+    -fx-border-width: 0.5px;
+    -fx-background-radius: 0px 20px 20px 0px;
+    -fx-border-radius: 0px 20px 20px 0px;
+    -fx-border-color: #416c0d;
+    fx-font-weight: 700;
+    -fx-font-size: 15px;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+
+.combo-box:hover {
+    -fx-border-color: green;
+}
+.combo-box .arrow-button{
+}
+.combo-box .arrow-button .arrow{
+    -fx-background-color: green;
+
+}
+
+.combo-box-base:hover {
+    -fx-background-color: #CAEF95;
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+    -fx-cursor: hand;
+}
+.combo-box-base:focused {
+    -fx-border-width: 1;
+}
+.combo-box-base {
+    -fx-background-color: linear-gradient(to bottom,#ffffff,#C1E293);
+    -fx-border-width: 0.4;
+    -fx-border-color: #4a7612;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+}
+
+.combo-box-base:focused
+{
+    -fx-text-fill: #007B24;
+}
+
+.combo-box .list-view {  /* phần bên trong cái thả xuống*/
+    -fx-border-width: 0.5;
+    -fx-border-color: #ACACAC;
+    -fx-background-color: #EBFFD1;
+    -fx-padding: 0px;
+    -fx-font-size: 10px;
+    -fx-font-weight: 700;
+}
+
+.combo-box .list-view .list-cell {
+
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 15px;
+    -fx-text-fill: #3d3c3c;
+    -fx-background-color: #ffffff;
+}
+.combo-box .list-view .list-cell:hover {
+
+    -fx-background-color: #6fa62f;
+    -fx-text-fill: #ffffff;
+}
+.combo-box .list-view .list-cell:pressed {
+
+    -fx-background-color: #6fa62f;
+    -fx-text-fill: #ffffff;
+}
+.date-picker  *{
+    -fx-primary-color: #66a611;
+    -fx-secondary-color: #497309;
+    -fx-light-grey-color: #d1d1d1;
+    /*Set focus color*/
+    -fx-focus-color: -fx-secondary-color;
+    /*Increase font size*/
+    -fx-font-size: 1.05em;
+}
+
+/*-----------------------------------------
+Customize the right button background color
+-------------------------------------------*/
+.date-picker .arrow-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-background-radius: 0;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: -fx-secondary-color;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+/*-----------------------------------------
+Customize popup content
+-------------------------------------------*/
+.date-picker .cell {
+    -fx-background-color: white;
+}
+
+.date-picker .cell:hover {
+    -fx-background-color: -fx-primary-color;
+}
+
+.date-picker .cell:focused {
+    -fx-background-color: -fx-primary-color;
+}
+
+/*-----------------------------------------
+Customize the selected cell
+-------------------------------------------*/
+.date-picker .selected {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+.date-picker .selected:focused {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup {
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: -fx-primary-color;
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: -fx-secondary-color;
+}
+
+/*-----------------------------------------
+Customize left and right arrow
+-------------------------------------------*/
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+    -fx-background-color: #c2d70e;
+}
+
+.table-view {
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center ;
+}
+.table-view .table-column
+{
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+}
+.table-view .column-header-background .label
+{
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-color: linear-gradient(to bottom , #5A8F15, #a6d36a);
+    -fx-background-radius: 1px;
+}
+.table-view  .table-row-cell
+{
+    -fx-alignment: center;
+    -fx-font-size: 12.5px;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-weight: bold;
+
+}
+.table-view  .table-row-cell:hover
+{
+    -fx-font-size: 12.5px;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-weight: bold;
+    -fx-background-color:linear-gradient(to right, #e2eed5, #dcefe2);
+}
+.table-view  .table-row-cell:focused
+{
+    -fx-font-size: 13px;
+    -fx-font-family: "Segoe UI ";
+    -fx-font-weight: bold;
+    -fx-background-color:linear-gradient(to right, #bae088, #bce3ca);
+    -fx-border-color: #6b9139;
+    -fx-border-width: 1 0 1 0;
+    -fx-text-fill: #ffffff;
+    -fx-focus-color: transparent;
+}
+#tableview-main .column-header-background .label
+{
+    -fx-font-size: 15px;
+}
+#tableview-main
+{
+    -fx-border-color: #416c0d;
+
+}
+
+.table-view .table-cell
+{
+
+}
+.table-row-cell
+{
+    -fx-cell-size: 100px;
+}
+.table-cell {
+    -fx-wrap-text: true;
+}
+.table-view >.virtual-flow >.scroll-bar:vertical
+{
+
+}
+.table-row-cell:selected
+{
+}
+
+
+#red
+{
+    -fx-padding: 5 10 10 10 ;
+    -fx-background-insets: 0, 0 0 2 0 , 0 0 3 0, 0 0 4 0;
+    -fx-font-family: Verdana;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-background-color:
+            radial-gradient(center 50% 50%, radius 100%, #f36a6a, #fc4141);
+    -fx-font-weight: bold;
+    -fx-font-size: 1.08em;
+    -fx-text-fill: white;
+}
+#red:hover
+{
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100% , #e34646 0%, #b02525 100%),
+    #c93131,
+    #d23d3d,
+    radial-gradient(center 50% 50%, radius 100%, #f56f6f, #ff0000);
+    -fx-cursor: hand;
+}
+
+#red:pressed
+{
+    --fx-padding: 6 10 9 10 ;
+    -fx-background-insets: 1 0 0 0, 1 0 1 0 , 1 0 2 0, 1 0 3 0;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0),1,0,0,1);
+}
+
+#orange
+{
+    -fx-padding: 5 10 10 10 ;
+    -fx-background-insets: 0, 0 0 2 0 , 0 0 3 0, 0 0 4 0;
+    -fx-background-radius: 8;
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, #f69a0d, #ff8916);
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+#orange:hover
+{
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100% , #da641a 0%, #e15802 100%),
+    #e07939,
+    #ea5c03,
+    radial-gradient(center 50% 50%, radius 100%, #f8a933, #f69e44);
+    -fx-cursor: hand;
+}
+
+#orange:pressed
+{
+    --fx-padding: 6 10 9 10 ;
+    -fx-background-insets: 1 0 0 0, 1 0 1 0 , 1 0 2 0, 1 0 3 0;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0),4,0,0,1);
+}
+.lbl
+{
+    -fx-font-size: 20px;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-weight: bold;
+}

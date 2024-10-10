@@ -1,0 +1,64 @@
+.container
+{
+    -fx-border-color: #457c00;
+    -fx-border-width: 0.8;
+    -fx-background-color: #f4ffe9;
+}
+.container_top
+{
+    -fx-background-color: linear-gradient(to right,#D2FD95,#F8FDEF);
+    -fx-border-color: #c9c9cc;
+    -fx-border-width: 0.8 0.8 0.4 0.8;
+}
+
+/*label*/
+.txt
+{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 20px;
+}
+.lbl
+{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-alignment: center;
+    -fx-font-size: 20px;
+    -fx-text-fill: #568814;
+}
+/*text*/
+
+
+/*close*/
+.image
+{
+    -fx-opacity: 100;
+}
+.image_hover
+{
+    -fx-opacity: 0;
+}
+.pane_close
+{
+    -fx-background-color: transparent;
+}
+.pane_close:hover
+{
+    -fx-background-color: #FF0000;
+}
+
+.pane_close:hover .image_hover
+{
+    -fx-opacity: 100;
+}
+.pane_close:hover .image
+{
+    -fx-opacity: 0;
+}
+/*minimized*/
+.minimize
+{
+    -fx-background-color: transparent;
+}
+.minimize:hover
+{
+    -fx-background-color: #DFDFE2;
+}

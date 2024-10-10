@@ -1,0 +1,175 @@
+.container-left{
+    -fx-background-color: linear-gradient(to top,#C8F196,#F8FDEF);
+    -fx-border-color: #c9c9cc;
+    -fx-border-width: 0.4;
+}
+
+
+.container-left .button
+{
+    -fx-font-family:"Verdana";
+    -fx-font-size: 16;
+    -fx-background-color: transparent;
+    -fx-text-fill: Black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+    -fx-padding: 4 11 11 11 ;
+    -fx-background-insets: 0, 0 0 5 0 , 0 0 6 0, 0 0 7 0;
+}
+.container-left .button:hover
+{
+    -fx-font-family:"Verdana";
+    -fx-font-size: 16;
+    -fx-background-color: linear-gradient(to right,#8FFF8F,#03C4C3);
+    -fx-text-fill: Black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+}
+.container-left .button:pressed
+{
+    -fx-padding: 6 11 9 11;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0 ;
+}
+
+#logout:hover {
+    -fx-padding: 8 15 15 15 ;
+    -fx-background-insets: 0, 0 0 5 0 , 0 0 6 0, 0 0 7 0;
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100% , #e34646 0%, #b02525 100%),
+    #c93131,
+    #d23d3d,
+    radial-gradient(center 50% 50%, radius 100%, #f87272, #fc4141);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Verdana";
+    -fx-font-size: 16;
+
+    -fx-font-weight: bold;
+}
+#logout:focused {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 4 0 0 0, 4 0 5 0, 4 0 6 0, 4 0 7 0;
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100% , #e34646 0%, #b02525 100%),
+    #c93131,
+    #d23d3d,
+    radial-gradient(center 50% 50%, radius 100%, #f87272, #fc4141);
+    -fx-text-fill: #FFFFFF;
+}
+#red
+{
+    -fx-padding: 5 10 10 10 ;
+    -fx-background-insets: 0, 0 0 2 0 , 0 0 3 0, 0 0 4 0;
+    -fx-font-family: Verdana;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-background-color:
+            radial-gradient(center 50% 50%, radius 100%, #f36a6a, #fc4141);
+    -fx-font-weight: bold;
+    -fx-font-size: 1.08em;
+    -fx-text-fill: white;
+}
+#red:hover
+{
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100% , #e34646 0%, #b02525 100%),
+    #c93131,
+    #d23d3d,
+    radial-gradient(center 50% 50%, radius 100%, #f56f6f, #ff0000);
+    -fx-cursor: hand;
+}
+
+#red:pressed
+{
+    --fx-padding: 6 10 9 10 ;
+    -fx-background-insets: 1 0 0 0, 1 0 1 0 , 1 0 2 0, 1 0 3 0;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0),1,0,0,1);
+}
+
+.tlt
+{
+    -fx-font-family:"Verdana";
+    -fx-font-size: 35px;
+}
+.top-container
+{
+    -fx-background-color: linear-gradient(to right,#D2FD95,#F8FDEF);
+    -fx-border-color: #c9c9cc;
+    -fx-border-width: 0 0 0.4 0;
+}
+/*minimized*/
+.menu-button   * {
+    -fx-primary-color: #66a611;
+    -fx-secondary-color: #497309;
+    -fx-font-size: 1.1em;
+}
+.menu-button .menu-item {
+    -fx-text-fill: -fx-secondary-color;
+}
+.menu-button .menu-item:hover {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: -fx-primary-color;
+}
+.menu-button .menu-item:focused {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: -fx-secondary-color;
+}
+
+.minimize
+{
+    -fx-background-color: transparent;
+}
+.minimize:hover
+{
+    -fx-background-color: #DFDFE2;
+}
+
+/*close*/
+.image
+{
+    -fx-opacity: 100;
+}
+.image_hover
+{
+    -fx-opacity: 0;
+}
+.pane_close
+{
+    -fx-background-color: transparent;
+}
+.pane_close:hover
+{
+    -fx-background-color: #FF0000;
+}
+
+.pane_close:hover .image_hover
+{
+    -fx-opacity: 100;
+}
+.pane_close:hover .image
+{
+    -fx-opacity: 0;
+}
+.pane_progress {
+    -fx-background-color: rgba(190, 190, 190, 0.42);
+    -fx-background-radius: 40px;
+    -fx-border-radius-radius: 40px;
+}
+.pane_progress .progress-indicator {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+#pane-profile-cat:hover
+{
+    -fx-cursor: hand;
+}
+#pane-profile-cat:hover #profile-cat_black
+{
+    -fx-opacity: 0;
+}
+#pane-profile-cat:hover #profile-cat_green
+{
+    -fx-opacity: 100;
+}
+#pane-profile-cat:pressed
+{
+    -fx-background-color: #CAF191 ;
+}

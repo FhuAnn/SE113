@@ -1,0 +1,387 @@
+.container-overall
+{
+    -fx-background-color: #f3faea;
+}
+
+.button
+{
+    -fx-padding: 5 10 10 10 ;
+    -fx-background-insets: 0, 0 0 2 0 , 0 0 3 0, 0 0 4 0;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-color:
+    radial-gradient(center 50% 50%, radius 100%, #629d16, #4a7612);
+    -fx-font-weight: bold;
+    -fx-font-size: 1.08em;
+    -fx-text-fill: white;
+}
+ .button:hover
+{
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100% , #67a910 0%, #578a17 100%),
+    #72b40f,
+    #7ac00e,
+    radial-gradient(center 50% 50%, radius 100%, #6f9d2b, #7ccb02);
+    -fx-cursor: hand;
+
+}
+
+ .button:pressed
+{
+    --fx-padding: 6 10 9 10 ;
+    -fx-background-insets: 1 0 0 0, 1 0 1 0 , 1 0 2 0, 1 0 3 0;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0),4,0,0,1);
+}
+
+/*header*/
+.header-logo
+{
+    -fx-background-color: linear-gradient(to right,#FEFFFB,#D2FD94);
+}
+.header-logo Text
+{
+    -fx-text-fill: #000000;
+    -fx-font-weight: normal;
+}
+.header-top
+{
+    -fx-background-color: linear-gradient(to left,#FEFFFB,#D2FD94);
+    -fx-border-width: 0.5 0 0.5 0;
+    -fx-border-color: #4A7612;
+
+}
+.header-top Text
+{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 18px;
+}
+.container-find
+{
+    -fx-background-color: #F4FFE5;
+    -fx-border-width: 1 0 1 0;
+    -fx-border-color: #4A7612;
+}
+.container-find .radio-button
+{
+    -fx-text-fill: #4A7612;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 1.2em;
+}
+.container-find .radio /*chỉnh radio nhỏ lại*/
+{
+  -fx-scale-x: 0.7;
+  -fx-scale-y: 0.7;
+}
+
+/*footer*/
+.container-footer
+{
+    -fx-background-color: linear-gradient(to bottom,#FEFFFB,#D2FD94);
+    -fx-border-width: 1 0 0 0;
+    -fx-border-color: #4A7612;
+}
+
+ #red
+{
+    -fx-padding: 5 10 10 10 ;
+    -fx-background-insets: 0, 0 0 2 0 , 0 0 3 0, 0 0 4 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+    radial-gradient(center 50% 50%, radius 100%, #f36a6a, #fc4141);
+    -fx-font-weight: bold;
+    -fx-font-size: 1.08em;
+    -fx-text-fill: white;
+}
+#red:hover
+{
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100% , #e34646 0%, #b02525 100%),
+    #c93131,
+    #d23d3d,
+    radial-gradient(center 50% 50%, radius 100%, #f56f6f, #ff0000);
+    -fx-cursor: hand;
+}
+
+#red:pressed
+{
+    --fx-padding: 6 10 9 10 ;
+    -fx-background-insets: 1 0 0 0, 1 0 1 0 , 1 0 2 0, 1 0 3 0;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0),1,0,0,1);
+}
+#orange
+{
+    -fx-padding: 5 10 10 10 ;
+    -fx-background-insets: 0, 0 0 2 0 , 0 0 3 0, 0 0 4 0;
+    -fx-background-radius: 8;
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, #f69a0d, #ff8916);
+    -fx-font-weight: bold;
+    -fx-font-size: 1.08em;
+    -fx-text-fill: white;
+}
+#orange:hover
+{
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100% , #da641a 0%, #e15802 100%),
+    #e07939,
+    #ea5c03,
+    radial-gradient(center 50% 50%, radius 100%, #f8a933, #f69e44);
+    -fx-cursor: hand;
+}
+
+#orange:pressed
+{
+    --fx-padding: 6 10 9 10 ;
+    -fx-background-insets: 1 0 0 0, 1 0 1 0 , 1 0 2 0, 1 0 3 0;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0),4,0,0,1);
+}
+
+.input-field
+{
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 5;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #9E9DA3;
+    -fx-font-family: "Segoe UI Semibold";
+}
+.input-field:hover
+{
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 5;
+    -fx-border-color: #8BC634;
+
+}
+.input-field:focused
+{
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 5;
+    -fx-border-color: #8BC634;
+    -fx-wrap-text: true;
+}
+
+.container-pick
+{
+    -fx-background-color: #F4FFE5;
+    -fx-border-color: #4A7612;
+    -fx-border-radius: 5;
+}
+.container-pick Text
+{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 16;
+    -fx-text-fill: #ff0000;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+/*comboBox*/
+.container-pick .combo-box .text-field
+{
+    -fx-background-radius: 20px;
+}
+.container-pick .combo-box
+{
+    -fx-border-width: 0.5px;
+    -fx-background-radius: 0px 20px 20px 0px;
+    -fx-border-radius: 0px 20px 20px 0px;
+    -fx-border-color: #416c0d;
+    fx-font-weight: 700;
+    -fx-font-size: 15px;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+
+.container-pick .combo-box:hover {
+    -fx-border-color: green;
+}
+.
+.container-pick .combo-box .arrow-button{
+}
+.container-pick .combo-box .arrow-button .arrow{
+    -fx-background-color: green;
+
+}
+
+.container-pick .combo-box-base:hover {
+    -fx-background-color: #CAEF95;
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+    -fx-cursor: hand;
+}
+.container-pick .combo-box-base:focused {
+    -fx-border-width: 1;
+    -fx-text-fill: blue;
+}
+.container-pick .combo-box-base {
+    -fx-background-color: linear-gradient(to bottom,#ffffff,#C1E293);
+    -fx-border-width: 0.4;
+    -fx-border-color: #4a7612;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+}
+
+.combo-box-base:focused
+{
+    -fx-text-fill: #007B24;
+}
+
+.container-pick .combo-box .list-view {  /* phần bên trong cái thả xuống*/
+    -fx-border-width: 0.5px;
+    -fx-pref-width: 30;
+    -fx-border-color: #ACACAC;
+    -fx-background-color: #EBFFD1;
+    -fx-padding: 0px;
+    -fx-font-size: 10px;
+    -fx-font-weight: 700;
+}
+
+.container-pick .combo-box .list-view .list-cell {
+
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 15px;
+    -fx-text-fill: #3d3c3c;
+    -fx-background-color: #ffffff;
+}
+.container-pick .combo-box .list-view .list-cell:hover {
+
+    -fx-background-color: #6fa62f;
+    -fx-text-fill: #ffffff;
+}
+.container-pick .combo-box .list-view .list-cell:pressed {
+
+    -fx-background-color: #6fa62f;
+    -fx-text-fill: #ffffff;
+}
+/*date-picker*/
+.date-picker .text-field
+{
+    -fx-background-color: #ffffff;
+    -fx-font-size: 15px;
+    -fx-text-fill: #000000;;
+    -fx-border:0 ;
+    -fx-border-radius: 5 0 0 5;
+    -fx-background-radius: 5 0 0 5;
+    -fx-font-weight: bold;
+}
+.date-picker
+{
+    -fx-border-color: #4A7612;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.amount
+{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 13;
+    -fx-text-fill: #1C97D2;
+    -fx-border-width: 0.5;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #416c0d;
+}
+
+/*listview thuoc*/
+.input-medicine
+{
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 5;
+    -fx-border-color: #9E9DA3;
+    -fx-font-family: "Segoe UI Semibold";
+}
+.input-medicine:hover
+{
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 5;
+    -fx-border-color: #8BC634;
+
+}
+.input-medicine:focused
+{
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 5;
+    -fx-border-color: #8BC634;
+    -fx-wrap-text: true;
+}
+
+.listv
+{
+    -fx-background-color: #ffffff;
+    -fx-border-width: 0.5 2 2 2;
+    -fx-border-color: #ACACAC;
+    -fx-opacity: 0;
+}
+.input-medicine:hover .listv
+{
+    -fx-opacity: 100;
+    -fx-background-color: #ffffff;
+    -fx-border-width: 0.5 2 2 2;
+    -fx-border-color: #ACACAC;
+}
+/*table-view*/
+.table-view {
+    -fx-text-fill: #ffffff;
+}
+.table-view .table-column
+{
+    -fx-background-color: #5A8F15;
+}
+.table-view .column-header-background .label
+{
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center ;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+#tableview-main .column-header-background .label
+{
+    -fx-font-size: 15px;
+}
+#tableview-main
+{
+    -fx-border-color: #416c0d;
+
+}
+
+.anchor Text
+{
+    -fx-font-size: 15px;
+    -fx-font-family: "Segoe UI Semibold";
+}
+.titled-pane
+{
+    -fx-border-color: #416c0d;
+}
+.titled-pane .title
+{
+    -fx-background-color: linear-gradient(to top,#C1E293,#ffffff);
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 16px;
+}
+
+/*close*/
+.image
+{
+    -fx-opacity: 100;
+}
+.image_hover
+{
+    -fx-opacity: 0;
+}
+.pane_close
+{
+    -fx-background-color: transparent;
+}
+.pane_close:hover
+{
+    -fx-background-color: #FF0000;
+}
+
+.pane_close:hover .image_hover
+{
+    -fx-opacity: 100;
+}
+.pane_close:hover .image
+{
+    -fx-opacity: 0;
+}
