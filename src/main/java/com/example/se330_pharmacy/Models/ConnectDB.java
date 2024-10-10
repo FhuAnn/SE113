@@ -34,7 +34,7 @@ public class ConnectDB {
         try {
             if (isInternetAvailable()) {
                 Class.forName("org.postgresql.Driver");
-                //databaseLink= DriverManager.getConnection(urlPostgres,databaseUser,databasePassword);
+                /*connection= DriverManager.getConnection(urlPostgres,databaseUser,databasePassword);*/
                 connection = DriverManager.getConnection(urlNeon_DB);
                 if (connection != null) System.out.println("Connection Established");
                 else System.out.println("Connection Failed");

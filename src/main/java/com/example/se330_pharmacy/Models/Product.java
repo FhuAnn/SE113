@@ -37,7 +37,6 @@ public class Product {
         this.productSmallUnitQuantities = productSmallUnitQuantities;
         this.productBigUnitQuantities = productBigUnitQuantities;
     }
-
     public Product(int productId, String productName, long productImportPrice, String productDescription, String productOrigin, String productType, String productBigUnit) {
         this.productId = productId;
         this.productName = productName;
