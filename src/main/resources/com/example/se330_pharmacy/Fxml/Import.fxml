@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1356.0" styleClass="container-overall" stylesheets="@../Styles/Import.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.se330_pharmacy.Controllers.ImportController">
+    <children>
+        <TitledPane fx:id="tvProduct" animated="false" collapsible="false" layoutX="11.0" layoutY="312.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="892.0" text="Bảng sản phẩm">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="tbl_ProductTable" layoutX="-4.0" prefHeight="424.0" prefWidth="892.0">
+                            <columns>
+                                <TableColumn fx:id="col_idProduct" minWidth="44.66665840148926" prefWidth="68.66669654846191" text="Mã SP" />
+                                <TableColumn fx:id="col_nameProduct" minWidth="122.8" prefWidth="250.0" text="Tên sản phẩm" />
+                                <TableColumn fx:id="col_priceProduct" minWidth="80.00006103515625" prefWidth="80.00006103515625" text="Giá" />
+                                <TableColumn fx:id="col_quantityProduct" minWidth="80.00006103515625" prefWidth="80.00006103515625" text="Số lượng" />
+                                <TableColumn fx:id="col_descriptionProduct" minWidth="122.8" prefWidth="250.0" text="Mô tả" />
+                                <TableColumn fx:id="col_originProduct" minWidth="94.6666259765625" prefWidth="94.6666259765625" text="Nguồn gốc" />
+                                <TableColumn fx:id="col_unitProduct" minWidth="0.0" prefWidth="136.6666259765625" text="Đơn vị" />
+                                <TableColumn fx:id="col_typeProduct" minWidth="102.666748046875" prefWidth="139.99993896484375" text="Loại" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </TitledPane>
+        <HBox fx:id="hboxFind" layoutX="11.0" layoutY="267.0" prefHeight="37.0" prefWidth="371.0" styleClass="input-field">
+            <children>
+                <AnchorPane style="-fx-background-radius: 10;">
+                    <children>
+                        <ImageView id="search-icon" fitHeight="30.0" fitWidth="30.0" layoutX="4.333333333333334" layoutY="1.3333333333333333" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.333333333333334" AnchorPane.topAnchor="1.3333333333333333">
+                            <image>
+                                <Image url="@../Images/search_icon.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <TextField fx:id="tfFind" prefHeight="35.0" prefWidth="329.0" promptText="Tìm kiếm sản phẩm bằng tên, mã sản phẩm" styleClass="search-input">
+                    <font>
+                        <Font name="Segoe UI Semibold Italic" size="12.0" />
+                    </font>
+                </TextField>
+            </children>
+        </HBox>
+        <Pane fx:id="panelImport" layoutX="911.0" layoutY="9.0" prefHeight="767.0" prefWidth="426.0">
+            <children>
+                <TitledPane animated="false" collapsible="false" layoutX="8.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="402.0" text="Thông tin sản phẩm">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="369.0" prefWidth="399.0" styleClass="anchor-pane">
+                            <children>
+                                <TextField fx:id="tfProductID" disable="true" editable="false" layoutX="23.0" layoutY="25.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="224.0" promptText="Mã sản phẩm" styleClass="input-field" />
+                                <Text layoutX="22.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Mã sản phẩm" />
+                                <TextField fx:id="tfProductName" disable="true" editable="false" layoutX="22.0" layoutY="86.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="359.0" promptText="Tên sản phẩm" styleClass="input-field" />
+                                <Text layoutX="22.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Tên sản phẩm" />
+                                <TextField fx:id="tfProductPrice" disable="true" editable="false" layoutX="22.0" layoutY="146.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="356.0" promptText="Giá" styleClass="input-field" />
+                                <Text layoutX="22.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Giá" />
+                                <TextField fx:id="tfProductQuantities" layoutX="22.0" layoutY="216.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="165.0" promptText="Số lượng" styleClass="input-field" />
+                                <Text layoutX="22.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Số lượng" />
+                                <TextField fx:id="tfProductTotal" editable="false" layoutX="203.0" layoutY="215.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="181.0" promptText="Tổng tiền" styleClass="input-field" />
+                                <Text layoutX="201.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Tổng tiền" />
+                                <Text layoutX="22.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Nhà cung cấp" />
+                                <TextField fx:id="tf_supplier" layoutX="22.0" layoutY="307.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="285.0" promptText="Nhà cung cấp" styleClass="input-field" />
+                                <Button id="edit" fx:id="btnShow" layoutX="317.0" layoutY="296.0" mnemonicParsing="false" onAction="#handleButtonShow" prefHeight="77.0" prefWidth="63.0" style="-fx-pref-width: 70;" text="Xem" />
+                                <Line endX="100.0" layoutX="207.0" layoutY="268.0" startX="-100.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" collapsible="false" layoutX="7.0" layoutY="407.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="353.0" prefWidth="402.0" text="Công cụ">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="324.0" prefWidth="399.0" styleClass="anchor-pane">
+                            <children>
+                                <Text layoutX="77.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="Tổng tiền : " />
+                                <Text fx:id="lblTotalPay" fill="#727272" layoutX="181.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="100000 VND" />
+                                <Button id="add" fx:id="btnAdd" layoutX="70.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#btnAddClicked" prefHeight="59.0" prefWidth="129.0" text="Thêm" />
+                                <Button id="edit" fx:id="btnEdit" layoutX="222.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#btnEditClicked" prefHeight="77.0" prefWidth="138.0" text="Sửa" />
+                                <Button id="cancel" fx:id="btnCancel" layoutX="222.0" layoutY="121.0" mnemonicParsing="false" onMouseClicked="#btnCancelClicked" prefHeight="62.0" prefWidth="87.0" text="Hủy" />
+                                <Button id="create" fx:id="btnCreateForm" layoutX="73.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#btnCreateFormClicked" prefHeight="62.0" prefWidth="253.0" text="Tạo biểu mẫu" />
+                                <Button id="delete" fx:id="btnDelete" layoutX="72.0" layoutY="121.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#btnDeleteClicked" prefHeight="57.0" prefWidth="107.0" text="Xóa" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+            </children></Pane>
+        <TitledPane fx:id="tp_ImportHistory" animated="false" collapsible="false" layoutX="10.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="252.0" prefWidth="892.0" text="Lịch sử nhập hàng" visible="false">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="214.0" prefWidth="854.0">
+                    <children>
+                        <TableView fx:id="tbl_historyImport" layoutX="-3.0" layoutY="1.0" prefHeight="215.0" prefWidth="892.0">
+                            <columns>
+                                <TableColumn fx:id="col_idImport" minWidth="44.666653871536255" prefWidth="98.66665649414062" text="Mã" />
+                                <TableColumn fx:id="col_employnameImport" minWidth="121.99995422363281" prefWidth="214.66668701171875" text="Người nhập" />
+                                <TableColumn fx:id="col_supplierImport" minWidth="126.66665649414062" prefWidth="359.3333740234375" text="Nhà cung cấp" />
+                                <TableColumn fx:id="col_dateImport" minWidth="95.333251953125" prefWidth="218.6666259765625" text="Ngày" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </TitledPane>
+        <Pane fx:id="panelResultSupplier" layoutX="750.0" layoutY="410.0" prefHeight="243.0" prefWidth="575.0" styleClass="panelSupplier" visible="false">
+            <children>
+                <TableView fx:id="tbl_Supplier" layoutX="3.0" layoutY="4.0" prefHeight="235.0" prefWidth="573.0">
+                    <columns>
+                        <TableColumn fx:id="col_phonenumberPartner" minWidth="115.3333740234375" prefWidth="115.3333740234375" text="Số điện thoại" />
+                        <TableColumn fx:id="col_namePartner" minWidth="122.8" prefWidth="250.0" text="Tên đối tác" />
+                        <TableColumn fx:id="col_address" minWidth="122.8" prefWidth="300.0" text="Địa chỉ" />
+                    </columns>
+                </TableView>
+            </children>
+        </Pane>
+        <TitledPane fx:id="tp_left" animated="false" collapsible="false" layoutX="11.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="252.0" prefWidth="892.0" text="Danh sách nhập" AnchorPane.leftAnchor="10.666666666666666">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="tbl_DetailImportForm" layoutX="-3.0" layoutY="1.0" prefHeight="212.0" prefWidth="892.0">
+                            <columns>
+                                <TableColumn fx:id="col_idDetail" minWidth="109.9999942779541" prefWidth="109.9999942779541" text="Mã sản phẩm" />
+                                <TableColumn fx:id="col_nameDetail" minWidth="172.0" prefWidth="343.3332977294922" text="Tên sản phẩm" />
+                                <TableColumn fx:id="col_priceDetail" minWidth="126.66665649414062" prefWidth="145.3333740234375" text="Giá" />
+                                <TableColumn fx:id="col_quantityDetail" minWidth="134.666748046875" prefWidth="134.666748046875" text="Số lượng" />
+                                <TableColumn fx:id="col_totalDetail" minWidth="120.0" prefWidth="156.0" text="Tổng" />
+                            </columns>
+                        </TableView>
+                        <Label fx:id="lbl_noContent" layoutX="325.0" layoutY="100.0" prefHeight="27.0" prefWidth="233.0" style="-fx-background-color: #ffffff; -fx-alignment: center;" text="Danh sách nhập trống">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </content>
+        </TitledPane>
+        <Button id="add" fx:id="btnShowHistory" layoutX="413.0" layoutY="260.0" mnemonicParsing="false" onAction="#HandleButtonHistory" prefHeight="59.0" prefWidth="129.0" style="-fx-pref-width: 200;" text="Xem lịch sử " />
+        <ImageView fx:id="imgLogo" fitHeight="203.0" fitWidth="345.0" layoutX="13.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" styleClass="image_logo" visible="false">
+            <image>
+                <Image url="@../Images/Pharmacy_hori.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
