@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1356.0" styleClass="container-overall" stylesheets="@../Styles/Sale.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.se330_pharmacy.Controllers.SaleController">
+    <children>
+        <Button fx:id="btnAllBill" layoutX="843.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#btnViewAllBillClicked" prefHeight="39.0" prefWidth="196.0" text="Xem tất cả hoá đơn" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Semibold" size="18.0" />
+            </font>
+        </Button>
+        <TabPane fx:id="tabPane" layoutX="31.0" layoutY="78.0" prefHeight="514.0" prefWidth="777.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="tabProduct" disable="true" style="-fx-font-size: 16;" text="Sản phẩm">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="777.0">
+                            <children>
+                                <TableView fx:id="tvProduct" editable="true" layoutY="-2.0" prefHeight="486.0" prefWidth="777.0">
+                                    <columns>
+                                        <TableColumn fx:id="tcProductId" minWidth="30.0" prefWidth="45.33334732055664" text="ID" />
+                                        <TableColumn fx:id="tcProductName" prefWidth="131.99999237060547" text="Tên" />
+                                        <TableColumn fx:id="tcProductPrice" minWidth="8.0" prefWidth="105.0" text="Giá(Đơn vị lớn)" />
+                                        <TableColumn fx:id="tcProductSmallUnitQuantities" minWidth="5.3333740234375" prefWidth="106.0" text="Hiện có (DVN)" />
+                                        <TableColumn fx:id="tcProductSmallUnit" prefWidth="107.0" text="Đơn vị nhỏ" />
+                                        <TableColumn fx:id="tcProductBigUnitQuantities" minWidth="5.3333740234375" prefWidth="129.3333740234375" text="Hiện có (DVL)" />
+                                        <TableColumn fx:id="tcProductBigUnit" minWidth="5.3333740234375" prefWidth="129.3333740234375" text="Đơn vị lớn" />
+                                        <TableColumn fx:id="tcProductCoef" minWidth="0.0" prefWidth="49.33331298828125" text="Tỷ lệ" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabInvoiceList" disable="true" style="-fx-font-size: 16;" text="Danh sách hoá đơn">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="777.0">
+                            <children>
+                                <TableView fx:id="tvInvoiceList" editable="true" layoutY="-2.0" prefHeight="486.0" prefWidth="777.0">
+                                    <columns>
+                                        <TableColumn fx:id="tcBillId" minWidth="30.0" prefWidth="45.33334732055664" text="ID" />
+                                        <TableColumn fx:id="tcBillCusName" prefWidth="131.99999237060547" text="Tên khách hàng" />
+                                        <TableColumn fx:id="tcBillCusNumber" prefWidth="98.66664123535156" text="Số điện thoại" />
+                                        <TableColumn fx:id="tcBillValue" prefWidth="126.6666259765625" text="Tổng hoá đơn" />
+                                        <TableColumn fx:id="tcBillDate" minWidth="8.0" prefWidth="101.99996948242188" text="Ngày" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <TitledPane animated="false" collapsible="false" layoutX="31.0" layoutY="602.0" prefHeight="159.0" prefWidth="777.0" text="Tuỳ chọn">
+            <content>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="128.0" prefWidth="775.0" styleClass="anchor-pane">
+                    <children>
+                        <Text layoutX="23.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chọn đơn vị  ">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="35.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+
+                        <TextField fx:id="tfQuantity" layoutX="249.0" layoutY="71.0" prefHeight="37.0" prefWidth="196.0" promptText="Số lượng bán" styleClass="input-field">
+                            <font>
+                                <Font name="Segoe UI" size="14.0" />
+                            </font>
+                        </TextField>
+                        <Button id="add" fx:id="btnAdd" disable="true" layoutX="617.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#btnAddClicked" prefHeight="39.0" prefWidth="82.0" text="Thêm" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button id="delete" fx:id="btnDelete" disable="true" layoutX="617.0" layoutY="65.0" mnemonicParsing="false" onMouseClicked="#btnDeleteClicked" prefHeight="39.0" prefWidth="82.0" text="Xoá" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="18.0" />
+                            </font>
+                        </Button>
+                        <AnchorPane fx:id="paneBigUnit" layoutX="377.0" layoutY="13.0" prefHeight="55.0" prefWidth="153.0">
+                            <children>
+                                <Label fx:id="bigAmountSoldOut" layoutX="35.0" layoutY="26.0" prefWidth="79.0" text="(Hết hàng)" textFill="#fa481e" visible="false">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="bigAmount" layoutX="21.0" layoutY="26.0" text="(Không xác định)" textFill="#1e9dfb">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <RadioButton fx:id="radBigUnit" disable="true" layoutX="11.0" layoutY="1.0" mnemonicParsing="false" text="Không xác định">
+                                    <font>
+                                        <Font name="Segoe UI Semibold" size="14.0" />
+                                    </font>
+                                </RadioButton>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paneSmallUnit" layoutX="201.0" layoutY="14.0" prefHeight="55.0" prefWidth="153.0">
+                            <children>
+                                <Label fx:id="smallAmount" layoutX="20.0" layoutY="26.0" text="(Không xác định)" textFill="#1e9dfb">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <RadioButton fx:id="radSmallUnit" disable="true" layoutX="8.0" layoutY="2.0" mnemonicParsing="false" text="Không xác định">
+                                    <font>
+                                        <Font name="Segoe UI Semibold" size="14.0" />
+                                    </font>
+                                </RadioButton>
+                                <Label fx:id="smallAmountSoldOut" layoutX="42.0" layoutY="27.0" text="(Hết hàng)" textFill="#fa481e" visible="false">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </content>
+            <font>
+                <Font name="Segoe UI Semibold" size="16.0" />
+            </font>
+        </TitledPane>
+        <TitledPane animated="false" collapsible="false" layoutX="843.0" layoutY="527.0" prefHeight="233.0" prefWidth="488.0" text="Biên lai">
+            <content>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="197.0" prefWidth="501.0" styleClass="anchor-pane">
+                    <children>
+                        <Text layoutX="53.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên khách hàng">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="55.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số điện thoại">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="tfPhoneNumber" layoutX="193.0" layoutY="59.0" prefHeight="37.0" prefWidth="233.0" promptText="Số điện thoại" styleClass="input-field">
+                            <font>
+                                <Font name="Segoe UI" size="14.0" />
+                            </font>
+                        </TextField>
+                        <Text layoutX="53.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng hoá đơn">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <Text fx:id="textTotalInvoice" fill="#1e9dfb" layoutX="193.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 VND">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <Button id="create" fx:id="btnCreateBill" layoutX="277.0" layoutY="127.0" mnemonicParsing="false" onMouseClicked="#btnCreateBillClicked" prefHeight="59.0" prefWidth="177.0" text="Xuất hoá đơn" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button id="cancel" fx:id="btnCancel" layoutX="165.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#btnCancelClicked" prefHeight="35.0" prefWidth="87.0" text="Huỷ" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="18.0" />
+                            </font>
+                        </Button>
+                        <TextField fx:id="tfCustomName" layoutX="192.0" layoutY="14.0" prefHeight="37.0" prefWidth="234.0" promptText="Tên khách hàng" styleClass="input-field">
+                            <font>
+                                <Font name="Segoe UI Italic" size="14.0" />
+                            </font>
+                        </TextField>
+                    </children>
+                </AnchorPane>
+            </content>
+            <font>
+                <Font name="Segoe UI Semibold" size="16.0" />
+            </font>
+        </TitledPane>
+        <TabPane fx:id="tabPaneCart" layoutX="843.0" layoutY="78.0" prefHeight="435.0" prefWidth="488.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="tabCart" disable="true" style="-fx-font-size: 16;" text="Giỏ hàng">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="660.0">
+                            <children>
+                                <TableView fx:id="tvCart" editable="true" layoutY="-2.0" prefHeight="407.0" prefWidth="488.0">
+                                    <columns>
+                                        <TableColumn fx:id="tcProductIdCart" minWidth="30.0" prefWidth="45.33334732055664" text="ID" />
+                                        <TableColumn fx:id="tcProductNameCart" prefWidth="131.99999237060547" text="Tên" />
+                                        <TableColumn fx:id="tcProductPriceCart" prefWidth="98.66664123535156" text="Giá" />
+                                        <TableColumn fx:id="tcProductQuantitiesCart" prefWidth="126.6666259765625" text="Số lượng" />
+                                        <TableColumn fx:id="tcProductUnitCart" minWidth="8.0" prefWidth="101.99996948242188" text="Đơn vị" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabDetailInvoice" disable="true" style="-fx-font-size: 16;" text="Chi tiết hoá đơn">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="660.0">
+                            <children>
+                                <TableView fx:id="tvDetailInvoice" editable="true" layoutY="-2.0" prefHeight="407.0" prefWidth="477.0">
+                                    <columns>
+                                        <TableColumn fx:id="tcDetailProductName" minWidth="30.0" prefWidth="73.3333740234375" text="Tên SP" />
+                                        <TableColumn fx:id="tcDetailProductQuan" prefWidth="91.333251953125" text="Số lượng" />
+                                        <TableColumn fx:id="tcDetailProductUnit" prefWidth="98.66664123535156" text="Đơn vị " />
+                                        <TableColumn fx:id="tcDetailProductPrice" prefWidth="126.6666259765625" text="Giá" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="btnSelling" layoutX="612.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#btnSaleClicked" prefHeight="39.0" prefWidth="203.0" text="Bán hàng" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Semibold" size="18.0" />
+            </font>
+        </Button>
+        <HBox layoutX="33.0" layoutY="27.0" prefHeight="37.0" prefWidth="373.0" styleClass="input-field">
+            <children>
+                <AnchorPane style="-fx-background-radius: 10;">
+                    <children>
+                        <ImageView id="search-icon" fitHeight="30.0" fitWidth="30.0" layoutX="4.333333333333334" layoutY="1.3333333333333333" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.333333333333334" AnchorPane.topAnchor="1.3333333333333333">
+                            <image>
+                                <Image url="@../Images/search_icon.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <TextField fx:id="tfSearchByIdAndName" prefHeight="35.0" prefWidth="337.0" promptText="Tìm kiếm sản phẩm: id, tên,..." styleClass="search-input">
+                    <font>
+                        <Font name="Segoe UI Semibold Italic" size="12.0" />
+                    </font>
+                </TextField>
+            </children>
+        </HBox>
+
+    </children>
+</AnchorPane>
