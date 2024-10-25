@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1356.0" styleClass="container-overall" stylesheets="@../Styles/Product.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.se330_pharmacy.Controllers.ProductController">
+    <children>
+        <TitledPane animated="false" collapsible="false" graphicTextGap="0.0" layoutX="47.0" layoutY="12.0" prefHeight="322.0" prefWidth="726.0" text="Thông tin sản phẩm">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="289.0" prefWidth="743.0" styleClass="anchor-pane">
+                    <children>
+                        <Text layoutX="39.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="tfProductId" disable="true" layoutX="37.0" layoutY="30.0" prefHeight="30.0" prefWidth="237.0" promptText="ID sản phẩm (Read only)" styleClass="input-field">
+                            <font>
+                                <Font name="Segoe UI" size="16.0" />
+                            </font>
+                        </TextField>
+                        <Text layoutX="39.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên sản phẩm">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="tfProductName" disable="true" layoutX="37.0" layoutY="95.0" prefHeight="30.0" prefWidth="238.0" promptText="Tên sản phảm" styleClass="input-field">
+                            <font>
+                                <Font name="Segoe UI" size="16.0" />
+                            </font>
+                        </TextField>
+                        <Text layoutX="39.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="tfProductPrice" disable="true" layoutX="37.0" layoutY="152.0" prefHeight="30.0" prefWidth="239.0" promptText="Giá sản phẩm" styleClass="input-field">
+                            <font>
+                                <Font name="Segoe UI" size="16.0" />
+                            </font>
+                        </TextField>
+                        <Text layoutX="420.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loại sản phẩm">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <ComboBox fx:id="cbProductType" disable="true" layoutX="397.0" layoutY="27.0" prefHeight="41.0" prefWidth="248.0" />
+                        <Text layoutX="421.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mô tả sản phẩm">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="tfProductDescription" alignment="TOP_LEFT" disable="true" layoutX="419.0" layoutY="92.0" prefHeight="87.0" prefWidth="289.0" promptText="Mô tả sản phảm" styleClass="input-field">
+                            <font>
+                                <Font name="Segoe UI" size="16.0" />
+                            </font>
+                        </TextField>
+                        <Text layoutX="421.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nguồn gốc">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="tfProductOrigin" alignment="TOP_LEFT" disable="true" layoutX="419.0" layoutY="216.0" prefHeight="33.0" prefWidth="287.0" promptText="Nguồn gốc" styleClass="input-field">
+                            <font>
+                                <Font name="Segoe UI" size="16.0" />
+                            </font>
+                        </TextField>
+                        <Text layoutX="38.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đơn vị ">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <ComboBox fx:id="cbUnit" disable="true" layoutX="24.0" layoutY="217.0" prefHeight="35.0" prefWidth="170.0" />
+                        <HBox fx:id="hboxUnit" layoutX="40.0" layoutY="255.0" prefHeight="24.0" prefWidth="217.0">
+                            <children>
+                                <Text fx:id="lblValue" fill="#1e9dfb" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá trị">
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="16.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="lblSmallUnit" fill="#669a22" strokeType="OUTSIDE" strokeWidth="0.0" text="đơn vị bán">
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="4.0" />
+                                    </HBox.margin>
+                                </Text>
+                                <Text fx:id="lblOn" fill="#626262" layoutX="61.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="trên">
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="4.0" />
+                                    </HBox.margin>
+                                </Text>
+                                <Text fx:id="lblBigUnit" fill="#626262" layoutX="92.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="đơn vị nhập">
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="4.0" />
+                                    </HBox.margin>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <Pane fx:id="panel_Unit" layoutX="352.0" layoutY="2.0" prefHeight="278.0" prefWidth="368.0" styleClass="container_unit" visible="false">
+                            <children>
+                                <TableView fx:id="tbl_Unit" editable="true" layoutX="125.0" layoutY="28.0" onMouseClicked="#handleClickedUnitTBL" prefHeight="247.0" prefWidth="241.0">
+                                    <columns>
+                                        <TableColumn fx:id="tcUnitId" minWidth="30.0" prefWidth="45.33334732055664" text="ID" />
+                                        <TableColumn fx:id="tcValue" prefWidth="60.66664123535156" text="Hệ số" />
+                                        <TableColumn fx:id="tcSmallUnit" minWidth="5.3333740234375" prefWidth="102.0" text="ĐV nhỏ" />
+                                        <TableColumn fx:id="tcBigUnit" minWidth="5.3333740234375" prefWidth="102.0" text="ĐV bán" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                                <TextField fx:id="tf_coef" alignment="TOP_LEFT" layoutX="9.0" layoutY="29.0" prefHeight="33.0" prefWidth="104.0" promptText="Giá trị" styleClass="input-field">
+                                    <font>
+                                        <Font name="Segoe UI" size="16.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="tf_smallUnit" alignment="TOP_LEFT" layoutX="9.0" layoutY="86.0" prefHeight="33.0" prefWidth="104.0" promptText="Đơn vị nhỏ" styleClass="input-field">
+                                    <font>
+                                        <Font name="Segoe UI" size="16.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="tf_bigUnit" alignment="TOP_LEFT" layoutX="9.0" layoutY="144.0" prefHeight="33.0" prefWidth="104.0" promptText="Đơn vị lớn" styleClass="input-field">
+                                    <font>
+                                        <Font name="Segoe UI" size="16.0" />
+                                    </font>
+                                </TextField>
+                                <Text fx:id="lbl_Coef" layoutX="9.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hệ số">
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="16.0" />
+                                    </font>
+                                </Text>
+                                <Text layoutX="9.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đơn vị nhỏ">
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="16.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="lblBigUnitMini" layoutX="10.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đơn vị lớn">
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="16.0" />
+                                    </font>
+                                </Text>
+                                <Pane layoutX="337.0" onMouseClicked="#close" prefHeight="35.0" prefWidth="43.0" styleClass="pane_close">
+                                    <children>
+                                        <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true" styleClass="image_hover">
+                                            <image>
+                                                <Image url="@../Images/close-white.png" />
+                                            </image>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </ImageView>
+                                        <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                            <image>
+                                                <Image url="@../Images/close-gray.png" />
+                                            </image>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </ImageView>
+                                    </children>
+                                </Pane>
+                                <MenuButton layoutX="9.0" layoutY="183.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="110.0" text="Tuỳ chọn">
+                                    <items>
+                                        <Menu mnemonicParsing="false" text="Thêm">
+                                            <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#handleAddUnit" text="Thêm kép" />
+                                                <MenuItem mnemonicParsing="false" onAction="#handleSimpleUnitName" text="Thêm đơn" />
+                                            </items>
+                                        </Menu>
+                                        <MenuItem mnemonicParsing="false" onAction="#handleDeleteUnit" text="Xoá" />
+                                    </items>
+                                    <font>
+                                        <Font size="11.0" />
+                                    </font>
+                                </MenuButton>
+                                <Button id="add" fx:id="btnMini" layoutX="14.0" layoutY="223.0" mnemonicParsing="false" onMouseClicked="#btnMiniClicked" prefHeight="39.0" prefWidth="82.0" text="Thêm" textFill="#8cc835">
+                                    <font>
+                                        <Font name="Segoe UI Semibold" size="18.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </content>
+            <font>
+                <Font name="Segoe UI Semibold" size="14.0" />
+            </font>
+        </TitledPane>
+        <TitledPane animated="false" collapsible="false" graphicTextGap="0.0" layoutX="794.0" layoutY="9.0" prefHeight="329.0" prefWidth="181.0" text="Tuỳ chọn">
+            <content>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="285.0" prefWidth="273.0" styleClass="anchor-pane">
+                    <children>
+                        <Text layoutX="35.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <font>
+                                <Font name="Segoe UI Bold" size="16.0" />
+                            </font>
+                        </Text>
+                        <Button id="delete" fx:id="btnDelete" layoutX="38.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#btnDeleteClicked" prefHeight="39.0" prefWidth="82.0" text="Xoá" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button id="add" fx:id="btnAdd" layoutX="38.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#btnAddClicked" prefHeight="39.0" prefWidth="82.0" text="Thêm" textFill="#8cc835">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button id="edit" fx:id="btnEdit" layoutX="38.0" layoutY="94.0" mnemonicParsing="false" onMouseClicked="#btnEditClicked" prefHeight="39.0" prefWidth="82.0" text="Sửa" textFill="#fcb73b">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button id="delete" fx:id="btnCancel" layoutX="39.0" layoutY="213.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="62.0" prefWidth="87.0" text="Hủy" />
+                    </children>
+                </AnchorPane>
+            </content>
+            <font>
+                <Font name="Segoe UI Semibold" size="16.0" />
+            </font>
+        </TitledPane>
+        <TableView fx:id="tblProduct" editable="true" layoutX="47.0" layoutY="360.0" prefHeight="407.0" prefWidth="1275.0">
+            <columns>
+                <TableColumn fx:id="tcProductId" minWidth="30.0" prefWidth="45.33334732055664" text="ID" />
+                <TableColumn fx:id="tcProductName" prefWidth="190.66666412353516" text="Tên" />
+                <TableColumn fx:id="tcProductPrice" prefWidth="135.33331298828125" text="Giá (Đơn vị nhập)" />
+                <TableColumn fx:id="tcProductDescription" prefWidth="169.3333740234375" text="Mô tả SP" />
+                <TableColumn fx:id="tcProductOrigin" minWidth="8.0" prefWidth="121.33331298828125" text="Nguồn gốc" />
+                <TableColumn fx:id="tcProductUnitSale" minWidth="5.3333740234375" prefWidth="136.66668701171875" text="Đơn vị bán" />
+                <TableColumn fx:id="tcProductUnitImport" minWidth="0.0" prefWidth="130.0001220703125" text="Đơn vị nhập" />
+                <TableColumn fx:id="tcProductType" prefWidth="162.6666259765625" text="Loại" />
+                <TableColumn fx:id="tcProductCoef" prefWidth="81.3333740234375" text="Hệ số" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Text layoutX="47.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bảng sản phẩm">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0" />
+            </font>
+        </Text>
+        <HBox layoutX="1023.0" layoutY="305.0" prefHeight="37.0" prefWidth="298.0" styleClass="input-field">
+            <children>
+                <AnchorPane style="-fx-background-radius: 10;">
+                    <children>
+                        <ImageView id="search-icon" fitHeight="30.0" fitWidth="30.0" layoutX="4.333333333333334" layoutY="1.3333333333333333" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.333333333333334" AnchorPane.topAnchor="1.3333333333333333">
+                            <image>
+                                <Image url="@../Images/search_icon.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <TextField fx:id="tfFind" prefHeight="37.0" prefWidth="273.0" promptText="Tìm kiếm sản phẩm: id, tên,..." styleClass="search-input">
+                    <font>
+                        <Font name="Segoe UI Semibold Italic" size="12.0" />
+                    </font>
+                </TextField>
+            </children>
+        </HBox>
+
+    </children>
+</AnchorPane>
