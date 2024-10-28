@@ -11,8 +11,8 @@
 ## Giới thiệu chung
 Tác giả: 
 - Member: Hồ Phạm Phú An - 22520013 - [Github](https://github.com/FhuAnn)
-- Member: Nguyễn Sơn Bình - 22520135 - [Github](https://github.com/BinhNguyen215)
-- Member: Nguyễn Nguyên Ngọc Anh - 22520058 - [Github](https://github.com/AndreNguyen03)
+- Member: Hoàng Hồ Quốc Bảo - 22520102 - [Github](https://github.com/QuocBao0102)
+- Member: Bùi Khánh Đang - 22520187 - [Github](https://github.com/22520187)
 - Member: Đặng Quốc Bảo - 22520098 - [Github](https://github.com/bdquoc)
 
 Green Pharmacy là một ứng dụng quản lý nhà thuốc tiện ích, được xây dựng để mang lại trải nghiệm quản lý hiệu quả và hiện đại cho các doanh nghiệp trong lĩnh vực y tế. Với Green Pharmacy, việc quản lý hàng tồn kho trở nên đơn giản hơn bao giờ hết. Những tính năng như theo dõi số lượng và thông tin chi tiết sản phẩm, cùng với cảnh báo tồn kho thấp, giúp người dùng tránh được tình trạng thiếu hụt không mong muốn.
