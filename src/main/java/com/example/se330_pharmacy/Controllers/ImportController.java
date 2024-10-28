@@ -1,8 +1,8 @@
 package com.example.se330_pharmacy.Controllers;
 
 import com.example.se330_pharmacy.DataAccessObject.ProductDAO;
-import com.example.se330_pharmacy.DataAccessObject.ReceiptDAO;
-import com.example.se330_pharmacy.DataAccessObject.SupplierDAO;
+//import com.example.se330_pharmacy.DataAccessObject.ReceiptDAO;
+//import com.example.se330_pharmacy.DataAccessObject.SupplierDAO;
 import com.itextpdf.text.*;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.pdf.BaseFont;
