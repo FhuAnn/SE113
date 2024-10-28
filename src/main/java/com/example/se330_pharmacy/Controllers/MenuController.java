@@ -96,17 +96,17 @@ public class MenuController {
     @FXML
     void btnExportClicked(ActionEvent event) throws IOException {
         titleTextField.setText("Xuất hàng");
-        FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Export.fxml");
+        /*FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Export.fxml");
         ExportController exportController = loader.getController();
-        exportController.initData(employee);
+        exportController.initData(employee);*/
     }
 
     @FXML
     void btnSupplierClicked(MouseEvent event) throws IOException {
         titleTextField.setText("Nhà cung cấp");
-        FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Supplier.fxml");
+        /*FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Supplier.fxml");
         SupplierController supplierController = loader.getController();
-        supplierController.initData(employee);
+        supplierController.initData(employee);*/
     }
 
     @FXML
@@ -125,9 +125,9 @@ public class MenuController {
     @FXML
     void btnPayslipClicked(ActionEvent event) throws IOException {
         titleTextField.setText("Phiếu lương");
-        FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Accountant_PaySlip.fxml");
+        /*FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Accountant_PaySlip.fxml");
         PaySlipController paySlipController = loader.getController();
-        paySlipController.initData(employee);
+        paySlipController.initData(employee);*/
     }
 
     @FXML
@@ -139,9 +139,9 @@ public class MenuController {
     @FXML
     void btnReceiptClicked(ActionEvent event) throws IOException {
         titleTextField.setText("Hóa đơn");
-        FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Accountant_Receipt.fxml");
+        /*FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Accountant_Receipt.fxml");
         ReceiptController receiptController = loader.getController();
-        receiptController.initData(employee);
+        receiptController.initData(employee);*/
     }
 
     @FXML
