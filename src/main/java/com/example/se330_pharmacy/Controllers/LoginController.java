@@ -1,5 +1,6 @@
 package com.example.se330_pharmacy.Controllers;
 
+import com.example.se330_pharmacy.DataAccessObject.EmployeeDAO;
 import com.example.se330_pharmacy.Models.ConnectDB;
 import com.example.se330_pharmacy.Models.Model;
 import javafx.animation.KeyFrame;

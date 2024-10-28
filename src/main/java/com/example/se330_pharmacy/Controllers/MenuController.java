@@ -96,25 +96,25 @@ public class MenuController {
     @FXML
     void btnExportClicked(ActionEvent event) throws IOException {
         titleTextField.setText("Xuất hàng");
-        FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Export.fxml");
-//        ExportController exportController = loader.getController();
-//        exportController.initData(employee);
+        /*FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Export.fxml");
+        ExportController exportController = loader.getController();
+        exportController.initData(employee);*/
     }
 
     @FXML
     void btnSupplierClicked(MouseEvent event) throws IOException {
         titleTextField.setText("Nhà cung cấp");
-        FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Supplier.fxml");
-//        SupplierController supplierController = loader.getController();
-//        supplierController.initData(employee);
+        /*FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Supplier.fxml");
+        SupplierController supplierController = loader.getController();
+        supplierController.initData(employee);*/
     }
 
     @FXML
     void btnImportClicked(ActionEvent event) throws IOException {
         titleTextField.setText("Nhập hàng");
         FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Import.fxml");
-//        ImportController importController = loader.getController();
-//        importController.InitData(employee);
+        ImportController importController = loader.getController();
+        importController.InitData(employee);
     }
 
     @FXML
@@ -125,9 +125,9 @@ public class MenuController {
     @FXML
     void btnPayslipClicked(ActionEvent event) throws IOException {
         titleTextField.setText("Phiếu lương");
-        FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Accountant_PaySlip.fxml");
-//        PaySlipController paySlipController = loader.getController();
-//        paySlipController.initData(employee);
+        /*FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Accountant_PaySlip.fxml");
+        PaySlipController paySlipController = loader.getController();
+        paySlipController.initData(employee);*/
     }
 
     @FXML
@@ -139,17 +139,17 @@ public class MenuController {
     @FXML
     void btnReceiptClicked(ActionEvent event) throws IOException {
         titleTextField.setText("Hóa đơn");
-        FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Accountant_Receipt.fxml");
-//        ReceiptController receiptController = loader.getController();
-//        receiptController.initData(employee);
+        /*FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Accountant_Receipt.fxml");
+        ReceiptController receiptController = loader.getController();
+        receiptController.initData(employee);*/
     }
 
     @FXML
     void btnSaleClicked(ActionEvent event) throws IOException {
         titleTextField.setText("Bán hàng");
         FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Sale.fxml");
-//        SaleController saleController = loader.getController();
-//        saleController.initData(employee);
+        SaleController saleController = loader.getController();
+        saleController.initData(employee);
     }
 
     @FXML
