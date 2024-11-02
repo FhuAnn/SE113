@@ -104,9 +104,9 @@ public class MenuController {
     @FXML
     void btnSupplierClicked(MouseEvent event) throws IOException {
         titleTextField.setText("Nhà cung cấp");
-        /*FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Supplier.fxml");
+        FXMLLoader loader = setMainPane("/com/example/se330_pharmacy/Fxml/Supplier.fxml");
         SupplierController supplierController = loader.getController();
-        supplierController.initData(employee);*/
+        supplierController.initData(employee);
     }
 
     @FXML

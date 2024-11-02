@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="350.0" prefWidth="500.0" stylesheets="@../Styles/Profile.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.se330_pharmacy.Controllers.ProfileController">
+   <children>
+      <Pane fx:id="lbl_header" prefHeight="60.0" prefWidth="500.0" styleClass="container_top">
+         <children>
+            <Pane fx:id="btnClose" layoutX="457.0" onMouseClicked="#closeProfileView" prefHeight="35.0" prefWidth="43.0" styleClass="pane_close">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="9.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" styleClass="image_hover">
+                     <image>
+                        <Image url="@../Images/close-white.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="9.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                     <image>
+                        <Image url="@../Images/close-gray.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Text layoutX="150.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Thông tin nhân viên" />
+            <ImageView fitHeight="54.0" fitWidth="127.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Pharmacy_hori.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="414.0" layoutY="1.0" onMouseClicked="#minimizeProfile" prefHeight="35.0" prefWidth="43.0" styleClass="minimize">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="18.0" layoutX="12.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/minimize-sign.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <VBox layoutY="60.0" prefHeight="291.0" prefWidth="500.0" styleClass="container">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="350.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Mã nhân viên">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></Text>
+                  <Label fx:id="employee_id_lbl" styleClass="lbl" text="null">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin></Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="350.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Tên nhân viên">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></Text>
+                  <Label fx:id="employname_lbl" styleClass="lbl" text="null">
+                     <HBox.margin>
+                        <Insets left="98.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="350.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Username">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></Text>
+                  <Label fx:id="username_lbl" alignment="CENTER" styleClass="lbl" text="null">
+                     <HBox.margin>
+                        <Insets left="125.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="350.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Vị trí làm việc">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></Text>
+                  <Label fx:id="position_lbl" styleClass="lbl" text="null">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
