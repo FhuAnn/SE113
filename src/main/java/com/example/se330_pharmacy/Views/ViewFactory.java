@@ -50,9 +50,25 @@ public class ViewFactory {
         stageMenu.show();
     }
 
-    public void showAddReceiptWindow(Payslip payslip, int _idCharger, String _employnameCharger, String _vitricharger, /*PaySlipController paySlipController, ReceiptController receiptController,*/ Receipt receipt) {
+    public void showAddReceiptWindow(Payslip payslip, int _idCharger, String _employnameCharger, String _vitricharger, PaySlipController paySlipController, ReceiptController receiptController, Receipt receipt) {
+        if(stageAddReceiptAccountant==null)
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/se330_pharmacy/Fxml/Add_Accountant_Receipt.fxml"));
+            stageAddReceiptAccountant=createStage(loader);
+            AddReceiptController addReceiptController = loader.getController();
+            addReceiptController.initData(payslip,_idCharger,_employnameCharger,_vitricharger,paySlipController,receiptController,receipt);
+        }
+        else {
+            stageAddReceiptAccountant.toFront();
+        }
     }
-    public void showAddPayslipWindow(Payslip payslip/* PaySlipController paySlipController*/) {
+    public void showAddPayslipWindow(Payslip payslip, PaySlipController paySlipController) {
+        if(stageAddPayslipAccountant==null) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/se330_pharmacy/Fxml/Add_Accountant_Payslip.fxml"));
+            stageAddPayslipAccountant = createStage(loader);
+            AddPayslipController addPayslipController = loader.getController();
+            addPayslipController.initData(payslip,paySlipController);
+        } else  stageAddPayslipAccountant.toFront();
     }
     private Stage createStage(FXMLLoader loader) {
         Scene scene = null;
