@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="780.0" prefWidth="1356.0" styleClass="container_overall" stylesheets="@../Styles/Accountant_Receipt.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.se330_pharmacy.Controllers.ReceiptController">
+   <children>
+      <Pane layoutX="900.0" layoutY="10.0" prefHeight="67.0" prefWidth="399.0" styleClass="container_button">
+         <children>
+            <Button id="add" fx:id="btnAdd" disable="true" layoutX="16.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="52.0" prefWidth="108.0" text="Thêm" />
+            <Button id="edit" fx:id="btnEdit" layoutX="149.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="52.0" prefWidth="108.0" text="Sửa" />
+            <Button id="delete" fx:id="btnDelete" disable="true" layoutX="276.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="52.0" prefWidth="108.0" text="Xoá" />
+         </children>
+      </Pane>
+      <Text fx:id="lbFilterReceipt" layoutX="239.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl" text="Lọc" />
+      <DatePicker fx:id="dateTimePickerReceipt" layoutX="283.0" layoutY="27.0" style="-fx-font-size: 16px;" />
+      <ComboBox fx:id="cbStatusReceipt" layoutX="574.0" layoutY="28.0" prefWidth="150.0" promptText="Status" style="-fx-font-size: 16px;" />
+      <TableView fx:id="tblReceipt" layoutX="45.0" layoutY="78.0" prefHeight="668.0" prefWidth="1255.0">
+         <columns>
+            <TableColumn fx:id="col_maHoaDon" minWidth="111.33333969116211" prefWidth="111.33333969116211" style="-fx-font-size: 16px;" text="Mã hóa đơn" />
+            <TableColumn fx:id="col_tenNhanVien" minWidth="142.66673278808594" prefWidth="186.6667022705078" style="-fx-font-size: 16px;" text="Tên Nhân Viên" />
+            <TableColumn fx:id="col_noiDung" minWidth="97.3333740234375" prefWidth="211.33328247070312" style="-fx-font-size: 16px;" text="Nội dung" />
+            <TableColumn fx:id="col_tongTra" minWidth="71.333251953125" prefWidth="180.666748046875" style="-fx-font-size: 16px;" text="Tổng trả" />
+            <TableColumn fx:id="col_ngayLap" minWidth="56.666748046875" prefWidth="166.0001220703125" style="-fx-font-size: 16px;" text="Ngày lập" />
+            <TableColumn fx:id="col_trangThai" minWidth="32.66656494140625" prefWidth="177.99993896484375" style="-fx-font-size: 16px;" text="Trạng thái thanh toán" />
+            <TableColumn fx:id="col_nguoiTra" minWidth="32.66656494140625" prefWidth="219.3333740234375" style="-fx-font-size: 16px;" text="Người trả " />
+         </columns>
+      </TableView>
+      <Button id="add" fx:id="btnTatCa" layoutX="45.0" layoutY="20.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="52.0" prefWidth="174.0" style="-fx-pref-width: 180;" text="Tất cả hoá đơn" />
+   </children>
+</AnchorPane>

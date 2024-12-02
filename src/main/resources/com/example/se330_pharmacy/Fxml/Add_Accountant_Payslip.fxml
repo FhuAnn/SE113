@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="388.0" prefWidth="617.0" styleClass="container-main" stylesheets="@../Styles/Add_Accountant_Payslip.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.se330_pharmacy.Controllers.AddPayslipController">
+   <children>
+      <Pane layoutX="3.0" layoutY="2.0" prefHeight="61.0" prefWidth="610.0" styleClass="pane-top" stylesheets="@../Styles/Add_Accountant_Payslip.css">
+         <children>
+            <Pane fx:id="btnClose" layoutX="569.0" onMouseClicked="#close" prefHeight="35.0" prefWidth="43.0" styleClass="pane_close">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="9.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" styleClass="image_hover">
+                     <image>
+                        <Image url="@../Images/close-white.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="9.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                     <image>
+                        <Image url="@../Images/close-gray.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="17.0" prefHeight="61.0" prefWidth="129.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="47.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" styleClass="image_logo">
+                     <image>
+                        <Image url="@../Images/logo_hori.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Text layoutX="172.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_tiltle" text="PaySlip Information" />
+         </children>
+      </Pane>
+      <Text layoutX="54.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl" text="Nội dung" />
+      <Text layoutX="338.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl" text="Tổng trả:" />
+      <TextField fx:id="tf_tongTra" layoutX="338.0" layoutY="170.0" prefWidth="207.0" promptText="Tổng trả" styleClass="input-field" />
+      <Text layoutX="52.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl" text="Ngày lập phiếu" />
+      <Text layoutX="339.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl" text="Trạng thái:" />
+      <ComboBox fx:id="cbStatus" disable="true" layoutX="325.0" layoutY="248.0" prefHeight="44.0" prefWidth="168.0" promptText="Status" style="-fx-font-size: 16px;" />
+      <DatePicker fx:id="dp_date" disable="true" editable="false" layoutX="34.0" layoutY="326.0" prefHeight="42.0" prefWidth="199.0" />
+      <Button id="add" fx:id="btnAdd" layoutX="345.0" layoutY="314.0" mnemonicParsing="false" text="Add" />
+      <Button id="delete" fx:id="btnCancel" layoutX="462.0" layoutY="313.0" mnemonicParsing="false" text="Cancel" />
+      <Text layoutX="54.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl" text="Ghi chú" />
+      <Text layoutX="52.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl" text="Mã nhân viên:" />
+      <TextField fx:id="tf_ghiChu" layoutX="54.0" layoutY="254.0" prefHeight="35.0" prefWidth="220.0" promptText="Ghi chú" styleClass="input-field" />
+      <TextField fx:id="tf_maNhanVien" layoutX="54.0" layoutY="101.0" prefHeight="35.0" prefWidth="220.0" promptText="Mã nhân viên" styleClass="input-field" />
+      <TextField fx:id="tf_phieuLuongId" disable="true" layoutX="338.0" layoutY="101.0" prefWidth="207.0" promptText="Mã phiếu lương" styleClass="input-field" />
+      <Text fx:id="lbl_id" layoutX="338.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl" text="ID Phiếu:" />
+      <TextArea fx:id="ta_content" layoutX="52.0" layoutY="171.0" prefHeight="80.0" prefWidth="175.0" promptText="Content" styleClass="input-field" />
+   </children>
+</AnchorPane>

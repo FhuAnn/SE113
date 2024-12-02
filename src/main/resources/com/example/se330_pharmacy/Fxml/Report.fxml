@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1356.0" styleClass="container-overall" stylesheets="@../Styles/Report.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.se330_pharmacy.Controllers.BusinessReportController">
+   <children>
+      <TabPane fx:id="tabpaneReportMain" layoutX="11.0" layoutY="190.0" prefHeight="575.0" prefWidth="597.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabStatus" style="-fx-font-size: 16;" text="Theo dõi trạng thái">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="764.0">
+                     <children>
+                        <TableView fx:id="tbl_reportStatus" editable="true" layoutX="-2.0" layoutY="-4.0" prefHeight="546.0" prefWidth="597.0">
+                          <columns>
+                            <TableColumn fx:id="col_id" minWidth="30.0" prefWidth="60.666667222976685" text="ID" />
+                            <TableColumn fx:id="col_date" prefWidth="129.33327865600586" text="Ngày" />
+                              <TableColumn fx:id="col_name" prefWidth="153.3333740234375" text="Tên nhân viên" />
+                              <TableColumn fx:id="col_value" prefWidth="113.99993896484375" text="Giá trị" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabTop" style="-fx-font-size: 16;" text="Nhân viên hàng đầu">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="764.0">
+                     <children>
+                        <TableView fx:id="tbl_reportTop" editable="true" layoutX="-2.0" layoutY="-1.0" prefHeight="554.0" prefWidth="597.0">
+                           <columns>
+                              <TableColumn fx:id="col_idTop" minWidth="30.0" prefWidth="107.33334374427795" text="Mã nhân viên" />
+                              <TableColumn fx:id="col_nameTop" prefWidth="199.33331298828125" text="Tên nhân viên" />
+                              <TableColumn fx:id="col_numberTOP" prefWidth="148.66668701171875" text="Số lượng hoá đơn" />
+                              <TableColumn fx:id="col_totalTop" prefWidth="134.6666259765625" text="Tổng nguồn thu" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Pane id="right" layoutX="627.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="310.0" styleClass="pnl">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="Tổng thu từ bán hàng (theo tháng) " />
+            <Text fx:id="valueRevenueMonth" fill="WHITE" layoutX="14.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="10.000.000" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="Theo ngày:" />
+            <Text fx:id="valueRevenueToday" fill="WHITE" layoutX="111.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="None" />
+         </children></Pane>
+      <Pane id="center" layoutX="304.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="310.0" styleClass="pnl">
+         <children>
+            <Text fill="#052f42" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="Số sản phẩm bán được (theo tháng)" />
+            <Text fx:id="numberProductOfMonth" fill="#052f42" layoutX="14.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="10.000.000" />
+            <Text fill="#052f42" layoutX="14.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="Theo ngày:" />
+            <Text fx:id="numberProductOfDay" fill="#052f42" layoutX="115.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="None" />
+         </children>
+      </Pane>
+      <Pane id="left" layoutX="12.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="282.0" styleClass="pnl">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="Số lượng đơn hàng (theo tháng)" />
+            <Text fx:id="numberBillOfMonth" fill="WHITE" layoutX="14.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="10.000.000" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="Theo ngày:" />
+            <Text fx:id="numberBillOfToday" fill="WHITE" layoutX="110.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="None" />
+         </children>
+      </Pane>
+      <HBox layoutX="11.0" layoutY="141.0" prefHeight="37.0" prefWidth="275.0" styleClass="input-field">
+         <children>
+            <AnchorPane style="-fx-background-radius: 10;">
+               <children>
+                  <ImageView id="search-icon" fitHeight="30.0" fitWidth="30.0" layoutX="4.333333333333334" layoutY="1.3333333333333333" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.333333333333334" AnchorPane.topAnchor="1.3333333333333333">
+                     <image>
+                        <Image url="@../Images/search_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="tfSearch" prefHeight="37.0" prefWidth="273.0" promptText="Tìm kiếm id, tên..." styleClass="search-input">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <DatePicker fx:id="dp_date" layoutX="453.0" layoutY="148.0" prefHeight="24.0" prefWidth="154.0" />
+      <Button id="add" fx:id="btnRefresh" layoutX="296.0" layoutY="137.0" mnemonicParsing="false" prefHeight="37.0" text="Làm mới" />
+      <CheckBox fx:id="checkboxAuto" layoutX="14.0" layoutY="114.0" mnemonicParsing="false" styleClass="lbl" text="Làm mới tự động" />
+      <Label layoutX="454.0" layoutY="122.0" styleClass="lbl" text="Chọn mốc thời gian" />
+      <TableView fx:id="tbl_reportMedicine" editable="true" layoutX="1013.0" layoutY="25.0" prefHeight="248.0" prefWidth="324.0">
+         <columns>
+            <TableColumn fx:id="col_idMedicine" minWidth="30.0" prefWidth="107.33334374427795" text="Mã thuốc" />
+            <TableColumn fx:id="col_nameMedicine" prefWidth="199.33331298828125" text="Tên thuốc" />
+            <TableColumn fx:id="col_number" prefWidth="134.6666259765625" text="Tổng SL" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <BorderPane fx:id="borderPane" layoutX="618.0" layoutY="287.0" prefHeight="477.0" prefWidth="731.0" />
+      <MenuButton layoutX="619.0" layoutY="240.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" text="Tuỳ chọn">
+        <items>
+            <Menu mnemonicParsing="false" text="Biểu đồ kinh doanh">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleProductBarChar" text="Biểu đồ cột" />
+                <MenuItem mnemonicParsing="false" onAction="#handleProductPieChar" text="Biểu đồ tròn" />
+              </items>
+            </Menu>
+            <MenuItem mnemonicParsing="false" onAction="#handleEmployeePieChar" text="Biểu đồ mức độ đóng góp" />
+          <MenuItem mnemonicParsing="false" onAction="#handleRevenueBarChar" text="Biểu đồ thống kê thu nhập năm" />
+          <MenuItem mnemonicParsing="false" onAction="#handleUpdateChar" text="Cập nhật" />
+        </items>
+      </MenuButton>
+      <Label layoutX="1013.0" layoutY="4.0" styleClass="lbl" text="Danh sách các sản phẩm bán chạy (theo tháng)" />
+      <Pane fx:id="paneProgress" layoutX="550.0" layoutY="225.0" prefHeight="262.0" prefWidth="312.0" styleClass="pane_progress" visible="false">
+         <children>
+            <ProgressIndicator layoutX="130.0" layoutY="97.0" prefHeight="53.0" prefWidth="102.0" />
+         </children>
+      </Pane>
+      <Pane id="revenue" layoutX="621.0" layoutY="128.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="181.0" styleClass="pnl">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="Tổng xuất" />
+            <Text fx:id="valueExportMonth" fill="WHITE" layoutX="14.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="10.000.000" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15px;" styleClass="lbl_panel" text="Theo ngày:" />
+            <Text fx:id="valueExportToday" fill="WHITE" layoutX="95.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12;" styleClass="lbl_panel" text="None" />
+         </children>
+      </Pane>
+      <Pane id="expend" layoutX="813.0" layoutY="128.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="193.0" styleClass="pnl">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="Tổng nhập vào" />
+            <Text fx:id="valueImportMonth" fill="WHITE" layoutX="14.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl_panel" text="10.000.000" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 14px;" styleClass="lbl_panel" text="Theo ngày:" />
+            <Text fx:id="valueImportToday" fill="WHITE" layoutX="92.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12px;" styleClass="lbl_panel" text="None">
+               <font>
+                  <Font size="10.0" />
+               </font></Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
